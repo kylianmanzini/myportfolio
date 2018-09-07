@@ -2,7 +2,6 @@ from django.db import models
 
 from modelcluster.fields import ParentalKey
 from modelcluster.contrib.taggit import ClusterTaggableManager
-from taggit.models import TaggedItemBase
 
 from wagtail.core.models import Page, Orderable
 from wagtail.core.fields import RichTextField
@@ -34,7 +33,6 @@ class BlogPage(Page):
         ('paragraph', blocks.RichTextBlock()),
         ('image', ImageChooserBlock()),
     ])
-  #  tags = ClusterTaggableManager(through=BlogPageTag, blank=True)
 
     def main_image(self):
         gallery_item = self.gallery_images.first()
@@ -51,13 +49,13 @@ class BlogPage(Page):
     content_panels = Page.content_panels + [
         MultiFieldPanel([
             FieldPanel('date'),
-          #  FieldPanel('tags'),
         ], heading="Blog information"),
         FieldPanel('intro'),
         StreamFieldPanel('body'),
         InlinePanel('gallery_images', label="Gallery images"),
     ]
 
+show_in_menus = True
 
 class BlogPageGalleryImage(Orderable):
     page = ParentalKey(BlogPage, on_delete=models.CASCADE, related_name='gallery_images')
@@ -70,5 +68,3 @@ class BlogPageGalleryImage(Orderable):
         ImageChooserPanel('image'),
         FieldPanel('caption'),
     ]
-
-show_in_menus = True
