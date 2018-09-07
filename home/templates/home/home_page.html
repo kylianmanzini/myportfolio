@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags %}
+
+{% block body_class %}template-homepage{% endblock %}
+
+{% block content %}
+<div class="homepage-all">
+    <div class="intro-homepage">
+        <div class="first"><p>I'am</p></div>
+        <div class="mediamaticien"><p>a mediamatician :</p></div>
+        <div class="anim anim-1"><p>> a webdevelopper</p></div>
+        <div class="anim anim-2"><p>> a designer</p></div>
+        <div class="anim anim-3"><p>> a marketing agent</p></div>
+    </div>
+    <div class="homepage-works-link">
+        <a href="../myworks"><p>See my Works !</p></a>
+    </div>
+</div>
+
+{% endblock %}

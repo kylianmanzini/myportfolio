@@ -1,0 +1,359 @@
+/* 
+==========================================================================
+Base Declarations
+==========================================================================
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Imprima|Kreon:400,700');
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: 'Imprima', Arial, Helvetica, sans-serif;
+  font-size: 16px; 
+}
+h1, h2, h3, nav{
+  font-family: 'Kreon', serif;
+}
+h1 {
+  font-size: 3.5rem;
+  margin-bottom: 2rem; 
+}
+h2 {
+  font-size: 2.5rem;
+}
+p {
+  font-size: 1rem;
+}
+body {
+  background-color: #32647D;
+  color: #DCDCDC;
+}
+
+a {
+  text-decoration: none;
+  color: #DCDCDC;
+  transition: all 0.2s;
+}
+a:hover {
+  text-shadow: 0px 0px 30px #000000;
+}
+li {
+  list-style: none;
+}
+/* 
+==========================================================================
+To tidy
+==========================================================================
+*/
+
+img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+.landing-contact-page-div h2 {
+  text-align: center;
+}
+
+form div {
+  display: flex;
+  flex-flow: column;
+  margin: 0.5rem 0;
+  max-width: 900px;
+}
+
+.btn-primary {
+  height: 50px;
+  width: 130px;
+  border: none;
+  background-color: #285A73;
+  color: #DCDCDC;
+  font-size: 1.5rem;
+  font-family: "Imprima";
+  margin: 1rem 0 0 0;
+  transition: all 0.2s ease;
+}
+.btn-primary:hover {
+  box-shadow: 0px 0px 5px #000000;
+  font-size: 1.575rem;
+  cursor: pointer;
+}
+/* 
+==========================================================================
+Header things
+==========================================================================
+*/
+
+header {
+  background-color: #285A73;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 78px;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  box-shadow:  0px 0px 20px #285A73;
+}
+header nav {
+  display: flex;
+  width: 90%;
+  align-items: center;
+  flex-flow: row nowrap;
+}
+header nav ul {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 24px;
+}
+.title {
+  display: none;
+}
+.active {
+  text-shadow: 0px 0px 30px #000000;
+}
+
+@media only screen and (min-width: 1200px) {
+
+  .title {
+    display: inline-flex;
+    justify-self: flex-start;
+    width: 30%;
+    font-size: 24px;
+  }
+  header nav ul {
+    width: 70%;
+  }
+}
+
+/* 
+==========================================================================
+Main things
+==========================================================================
+*/
+
+main {
+  position: relative;
+  top: 78px;
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  flex-flow: column nowrap;
+  z-index: 0;
+  padding-top: 40px;
+}
+.allpost{
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+  margin: 0 0 50px 0;
+  align-items: center;
+  justify-content: space-between;
+}
+.post {
+  display: inline-flex;
+  flex-flow: column wrap;
+  height: auto;
+  width: 400px;
+  margin: 3rem 0;
+  transition: all 0.5s ease;
+}
+.post:hover {
+  transform: rotate(3deg) scale(1.10);
+  opacity: 1;
+}
+.post p {
+  font-size: 1.2rem;
+  margin: 0 0 0.5rem 0;
+}
+@media only screen and (max-width: 905px) {
+  .allpost{
+    justify-content: center;
+  }
+}
+/* 
+==========================================================================
+Homepage specific things
+==========================================================================
+*/
+.intro-homepage{
+  display: flex;
+  flex-flow: column nowrap;
+  height: 45vh;
+  margin: 20px 0 0 0;
+  padding:0 10%;
+  justify-content: center;
+}
+
+.intro-homepage div p{
+  font-family: 'Kreon', serif;
+}
+
+.intro-homepage .first {
+  align-self: flex-start;
+}
+.intro-homepage .anim {
+  align-self: flex-start;
+}
+.intro-homepage .first p {
+  font-size: 3rem;
+}
+.intro-homepage .anim p {
+  text-align: center;
+  font-size: 4rem;
+  overflow: hidden; 
+  border-right: .10em solid transparent; 
+  white-space: nowrap; 
+  margin: 0 auto; 
+  letter-spacing: .1rem;
+  color: transparent;
+}
+.anim-1 p{
+  animation: 
+    typing 2.5s 1s steps(20, end),
+    blink-caret 1s 1s step-end 3,
+    appear 10s 1s linear infinite;
+  }
+.anim-2 p{
+  animation: 
+    typing 2s 4s steps(17, end),
+    blink-caret 1s 4s step-end 3,
+    appear 10s 4s linear infinite;}
+.anim-3 p{
+  animation: 
+    typing 2.8s 6.5s steps(20, end),
+    blink-caret 1s 6.5s step-end infinite,
+    appear 10s 7s linear infinite;}
+
+.intro-homepage .mediamaticien p {
+  font-size: 5rem;
+}
+@keyframes appear {
+  from, to { color: #DCDCDC }
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #DCDCDC; }
+}
+.homepage-works-link {
+  margin: 30vh 0 0 0;
+  width: 100%;
+  text-align: center;
+  transition: all .6s ease;
+}
+.homepage-works-link:hover {
+  transform: scale(1.1);
+}
+
+.homepage-works-link p{
+  font-size: 32px;
+  font-family: 'Kreon', serif;
+  font-weight: 700;
+}
+@media only screen and (max-width: 800px) {
+  .intro-homepage .first p {
+    font-size: 2.4rem;
+  }
+  .intro-homepage .anim p {
+    font-size: 2.5rem;
+  }
+  .intro-homepage .mediamaticien p {
+    font-size: 3rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .intro-homepage .first p {
+    font-size: 2rem;
+  }
+  .intro-homepage .anim p {
+    font-size: 2.2rem;
+  }
+  .intro-homepage .mediamaticien p {
+    font-size: 2.7rem;
+  }
+}
+/* 
+==========================================================================
+Contact page things
+==========================================================================
+*/
+div input{
+  height: 40px;
+  padding: 5px;
+}
+div textarea {
+  padding: 5px;
+}
+div label {
+  font-size: 1.5rem;
+}
+div textarea, label, input {
+  font-family: 'Imprima', sans-serif;
+}
+div input, textarea {
+  font-size: 1.2rem;
+}
+/* 
+==========================================================================
+Spécific post things
+==========================================================================
+*/
+.flexing{
+  display: flex;
+  flex-flow: column nowrap;
+  align-self: center;
+  align-items: center;
+  background-color: #285A73;
+  padding: 5px;
+  box-shadow: 0px 0px 30px rgba(1,1,1,0.2);
+}
+.flexing .block-heading {
+  font-size: 2rem;
+  margin: 0 0 .5rem 0;
+}
+.flexing .block-paragraph {
+  font-size: 1rem;
+  margin: 0 0 .5rem 0
+}
+.flexing .block-image img {
+  max-width: 100%;
+  height: auto;
+  max-height: 60vh;
+}
+p a {
+  color: rgb(104, 193, 238);
+}
+.return a {
+  color: #DCDCDC;
+}
+h3 b{
+  font-size: 1.5rem;
+  padding: 100px 0;
+}
+p {
+  font-size: 1.1rem;
+  margin: 10px 0; 
+  text-align: justify;
+}
+@media only screen and (min-width: 1200px) {
+  .flexing{
+    width: 1000px;
+  }
+}
+.homepage-works-link a p {
+  text-align: center;
+}
+.return {
+  font-size: 2rem;
+  margin: 20px;
+  text-align: center;
+  width: 100%;
+}
