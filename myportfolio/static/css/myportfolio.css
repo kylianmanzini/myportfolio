@@ -271,13 +271,13 @@ Homepage specific things
 }
 @media only screen and (max-width: 600px) {
   .intro-homepage .first p {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   .intro-homepage .anim p {
-    font-size: 2.2rem;
+    font-size: 2.1rem;
   }
   .intro-homepage .mediamaticien p {
-    font-size: 2.7rem;
+    font-size: 2.4rem;
   }
 }
 /* 
